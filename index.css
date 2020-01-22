@@ -6,11 +6,23 @@ html
 
 body {
     margin: auto;
-  background: #dbf7ff;
+  background: gray;
 }
 
+footer{ 
+  background-color: whitesmoke;
+  
+}
+h1{ 
+  display: flex;
+  justify-content:center;
+  color: white;
+  text-decoration:underline;
+}
 
-
+header{ 
+  background-color: whitesmoke;
+}
 
 
 
@@ -23,7 +35,17 @@ list-style: none;
 padding: auto;
       margin: auto;
 }
+.acceuil
+{display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding: auto;}
 
+.bas{
+  padding-top: 30px;
+  display:flex;
+  justify-content:center;
+}
 .container {
     border: 2px solid #dedede;
     background-color: #f1f1f1;
@@ -31,7 +53,8 @@ padding: auto;
     padding: 10px;
     margin: 10px ;
   }
-  
+
+    
 
   
   .container::after {
@@ -41,12 +64,17 @@ padding: auto;
   }
   
   .container p {
-    float: left;
-margin: auto;
+    
+margin: 20px;
     width: auto;
-    margin-right: 20px;
+    
   }
   
+  .text{
+
+    text-align: right;
+    
+  }
   .dis
   {
 font-family: fantasy;

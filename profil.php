@@ -10,10 +10,12 @@
 	<body>
 	<header>
 
-<?php include('header.php') ;
+	<?php include('header.php') ;
+			if(!isset($_SESSION['login'])){header('Location: index.php');}
+
+			
 
 ?>
-
 
  
 </header>
@@ -90,5 +92,9 @@ if(isset($_POST['modifier']))
 		
 </section>
 </main>
+<footer> 
+
+copyright Mise à jour le 22 janvier 2019
+</footer> 
 			</body>	
 </html>

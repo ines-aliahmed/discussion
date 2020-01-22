@@ -41,6 +41,10 @@
 			
 </section>
 </main>
+<footer> 
+
+copyright Mise à jour le 22 janvier 2019
+</footer> 
 </body>
 </html>
 

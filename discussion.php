@@ -11,8 +11,12 @@
 	
 	<body>
     <header>
-		<?php include('header.php'); ?>
+	<?php include('header.php') ;
+			if(!isset($_SESSION['login'])){header('Location: index.php');}
 
+			
+
+?>
 		</header>
 
             <?php
@@ -43,7 +47,7 @@
 		<div class='container'>
 		 				
 		<p class='ido'><?php echo $data['id_utilisateur'];?></p>
-		   <p class=''><?php echo $data['message'];?>	</p>	
+		   <p class='text'><?php echo $data['message'];?>	</p>	
 		   <span class='tim'><?php echo $data['date'];?></span>
 								 </div>
 								 <?php
@@ -93,6 +97,11 @@ if(isset($_POST['submit']))
 				?>
 
 </section>
+
+<footer> 
+
+copyright Mise à jour le 22 janvier 2019
+</footer> 
 
 			</body>	
 </html>
