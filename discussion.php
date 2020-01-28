@@ -17,20 +17,23 @@
             <?php
             
             $connexion = mysqli_connect("localhost", "root", "", "discussion");
-					$sql = "SELECT * FROM messages";
-					$resultat = mysqli_query($connexion, $sql);
+			$sql = "SELECT messages.message, messages.date, utilisateurs.login, utilisateurs.id FROM messages INNER JOIN utilisateurs
+					ON messages.id_utilisateur = utilisateurs.id ORDER by date DESC";
+		
+			$resultat = mysqli_query($connexion, $sql);
 						while($data = mysqli_fetch_array($resultat))
 						{
                     ?>
             <section>        
 			<?php	
+		
 		if ($data['id'] % 2 != 0)
 		{
 			
 		?>
 		<div class="container">
 		 				
-      <p class="id"><?php echo $data['id_utilisateur'];?></p>
+      <p class="id"><?php echo $data['login'];?></p>
          <p class="texte"><?php echo $data['message'];?>	</p>	
          <span class="time"><?php echo $data['date'];?></span>
 			</div>
@@ -41,7 +44,7 @@
 ?>
 		<div class='containe'>
 		 				
-		<p class='ido'><?php echo $data['id_utilisateur'];?></p>
+		<p class='ido'><?php echo $data['login'];?></p>
 		   <p class='text'><?php echo $data['message'];?>	</p>	
 		   <span class='tim'><?php echo $data['date'];?></span>
 								 </div>
