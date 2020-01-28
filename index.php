@@ -1,49 +1,85 @@
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="index.css"/>
-		<title>Acceuil</title>
+		<title>Inscription</title>
 	</head>
-
-
-
-
 <body>
 		
 <header>
 		<?php include('header.php') ?>
 
 		</header>
+
+		<main>
+
+		<?php
+
+		if(isset($_SESSION['login']) || isset($_SESSION['pass']))
+					{
+						echo "<section><h1 class='titree'>Chat Club</h1></section>
+
+						<section>
+				<article><h2>Choisissez le salon de votre club</h2></article>
+			          </section>
+			<section class='index'>
+				<article><a href='discussion.php'><img  class='img'src='https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_Olympique_de_Marseille.svg/806px-Logo_Olympique_de_Marseille.svg.png'
+			width='250px'
+			height='250px'></a></article>
+			<aside><p>Olympique de Marseille</p></aside>
+			</section>
 		
-<h1> Peaky Blinders </h1> 
-<h1>Venez en parler</h1>
-<section class="acceuil">
+			
+			<section class='salon'>
+			<article><h2>Salon en preparation</h2></article>
+				
+		<section class='index'>
+			<article><img  class='img'src='https://upload.wikimedia.org/wikipedia/fr/thumb/e/e2/Olympique_lyonnais_%28logo%29.svg/888px-Olympique_lyonnais_%28logo%29.svg.png'
+		width='250px'
+		height='250px'></article>
+		<aside><p>Olympique lyonnais</p></aside>
+		</section>
+		<section class='index'>
+			<article><img  class='img'src='https://upload.wikimedia.org/wikipedia/commons/e/ea/Logo_ASSE.png'
+		width='250px'
+		height='250px'></article>
+		<aside><p>Association Sportive de Saint-Étienne</p></aside>
+		</section>
+		<section class='index'>
+			<article><img  class='img'src='https://upload.wikimedia.org/wikipedia/fr/thumb/4/4a/Paris_Saint-Germain_Football_Club_%28logo%29.svg/1024px-Paris_Saint-Germain_Football_Club_%28logo%29.svg.png'
+		width='250px'
+		height='250px'></article>
+		<aside><p>Paris Saint-Germain</p></aside>
+		</section>
+			
+		</section>";
+					}
+					else{
+						echo " <section> 
+						<article><h1 class='titree'>Chat Club </h1></article>
+						<article class='info'><p>Le 1er Chat en ligne 100% gratuit dédier au club de votre coeur.</p>
+						<p> Rejoins Chat Club  et partage ta passion.</p></article>
+							</section>
+				<section>
+			        	<nav><ul class='titre'>
+				<li class='lee'><a href='inscription.php'>Inscrivez-vous</a></li>
+				<li class='lee'><a href='connexion.php'>connectez-vous</a></li>
+						</ul></nav>
+						</section>
+						";
+					   }
+				?>
 
-<article>
-	<img src="https://intrld.com/wp-content/uploads/2019/06/Peaky.jpg"
-	width="400"
-	height="400">
-</article>
+</main>
 
-<article>
-	<img src="http://fr.web.img6.acsta.net/pictures/18/03/14/14/20/2069499.jpg"
-	width="400"
-	height="400">
-</article>
-</section>
 
-<section class="bas">
-
-<article class="bas">
-	<img  src="https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/08/19/node_87486/10986540/public/2019/08/19/B9720618299Z.1_20190819194443_000%2BGS2E9986B.1-0.jpg?itok=lp8SWqYL1566237144"
-	width="700"
-	height="400">
-</article>
-</section>
-
-<footer> 
-
-copyright Mise à jour le 22 janvier 2019
-</footer> 
+<footer>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>
         </body>
 </html>

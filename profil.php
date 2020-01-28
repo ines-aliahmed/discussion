@@ -10,12 +10,11 @@
 	<body>
 	<header>
 
-	<?php include('header.php') ;
-			if(!isset($_SESSION['login'])){header('Location: index.php');}
-
-			
+<?php include('header.php') ;
+	if(!isset($_SESSION['login'])){header('Location: index.php');}
 
 ?>
+
 
  
 </header>
@@ -50,7 +49,7 @@ if(isset($_POST['modifier']))
 				$_SESSION['login'] = $_POST['login'];
 				$modif_login = true;
 			}{
-				echo "<div class='coco'><p> Login modifier avec succès</p></div>";}
+				echo "<div class='titre'><p> Login modifier avec succès</p></div>";}
 		
 		}
 		
@@ -62,7 +61,7 @@ if(isset($_POST['modifier']))
 			$_SESSION['password'] = $_POST['passe'];
 			$modif_passe = true;
 		}	{
-			echo "<div class='coco'><p>Mot de passe modifier avec succès</p></div>";}
+			echo "<div class='titre'><p>Mot de passe modifier avec succès</p></div>";}
 	}
 
 	mysqli_close($connexion);
@@ -92,9 +91,13 @@ if(isset($_POST['modifier']))
 		
 </section>
 </main>
-<footer> 
 
-copyright Mise à jour le 22 janvier 2019
-</footer> 
+<footer>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>	
 			</body>	
 </html>

@@ -3,28 +3,10 @@ html
 {height: 100%;max-width: 100%;
 }
 
-
 body {
     margin: auto;
-  background: gray;
+  background: #dbf7ff;
 }
-
-footer{ 
-  background-color: whitesmoke;
-  
-}
-h1{ 
-  display: flex;
-  justify-content:center;
-  color: white;
-  text-decoration:underline;
-}
-
-header{ 
-  background-color: whitesmoke;
-}
-
-
 
 ul{display: flex;
     flex-direction: row;
@@ -35,17 +17,40 @@ list-style: none;
 padding: auto;
       margin: auto;
 }
-.acceuil
-{display: flex;
-flex-direction: row;
-justify-content: space-around;
-padding: auto;}
+    footer{
+      text-align: center;
+      margin-top: 130px;
+      color: red;
+    }
+/*index*/
 
-.bas{
-  padding-top: 30px;
-  display:flex;
-  justify-content:center;
+.titree
+{font-size: 45px;
+  text-align: center;
+  color: white;
+  text-shadow:2px 2px 5px red;
 }
+.index{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+aside
+{font-size: 18px;
+text-transform: uppercase;}
+
+.salon{opacity: 30%;}
+
+.info
+{font-weight: bold;
+text-align: center;
+font-size: 23px;}
+
+/*discussion*/
+
+
 .container {
     border: 2px solid #dedede;
     background-color: #f1f1f1;
@@ -53,8 +58,7 @@ padding: auto;}
     padding: 10px;
     margin: 10px ;
   }
-
-    
+  
 
   
   .container::after {
@@ -64,17 +68,30 @@ padding: auto;}
   }
   
   .container p {
-    
-margin: 20px;
+    float: left;
+margin: auto;
     width: auto;
-    
+    margin-right: 20px;
+  }
+ .containe {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px ;
+  }
+  .containe::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .containe p {
+    float: right;
+margin: auto;
+    width: auto;
+    margin-left: 20px;
   }
   
-  .text{
-
-    text-align: right;
-    
-  }
   .dis
   {
 font-family: fantasy;
@@ -88,6 +105,7 @@ font-family: fantasy;
    background-color: rgb(196, 116, 116);
 
   }
+  
   .ido
   {float: right;
     color: rgb(14, 12, 12);
@@ -172,7 +190,7 @@ width:450px;
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	border: 1px solid #257C9E;
     }
-    .coco{
+    .titre{
      text-align: center;
      animation: titre .75s ease-out infinite;
      text-shadow: 0px 0px 5px #004D98;

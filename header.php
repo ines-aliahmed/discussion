@@ -31,7 +31,6 @@ if (isset($_SESSION['login'])):
     <li><a href="index.php">Acceuil</a></li>
  <li><a href="inscription.php">Inscription</a></li>
  <li><a href="connexion.php">Connexion</a></li>
- <li><a href="#profil.php">Profil</a></li>
  <li><a href="connexion.php">Discussion</a></li>
 
  

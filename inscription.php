@@ -34,17 +34,21 @@
 						
 						<input class="submi"  type="password" name="confirmpass" placeholder="confirme mot de passe"required/></br>
 						
+						<label><input type="checkbox" name="condition" required placeholder="condition"/> <a href="">J'accepte les conditions générales d'utilisation.</a></label>
+						
 						<input class="submit"  type="submit" value="Inscription" name="inscription"required/></br>
-					
 						
 				</form> </div>
 			
 </section>
 </main>
-<footer> 
-
-copyright Mise à jour le 22 janvier 2019
-</footer> 
+<footer>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>	
 </body>
 </html>
 
@@ -54,6 +58,7 @@ if(isset($_POST["inscription"]))
 
 	$login=$_POST["login"];
 	$password=$_POST["pass"];
+	$password = sha1($password);
 	$confirmpassword=$_POST["confirmpass"];
     $connexion=mysqli_connect("localhost","root","","discussion");
 	$requete = "SELECT login FROM utilisateurs WHERE login = '$login'"; 
@@ -65,15 +70,15 @@ if(isset($_POST["inscription"]))
 
 
 	?>
-	<h2 class='titre'><p>Ce Login déjà existant</p></h2>
+	<h2 class='titre'><p>Ce Login est déjà existant</p></h2>
 	<?php 
 	  }
-elseif ($_POST["pass"] != $_POST["confirmpass"]) 
-{
+	  elseif ($_POST["pass"] != $_POST["confirmpass"]) 
+	  {
 ?>
-<h2 class='titre'> <p>Attention ! Mot de passe différent</p></h2>
+<h2 class='titre'> <p>Attention ! Mot de passe différents</p></h2>
 <?php
-}
+	  }
 else 
 {
 $requete2 = "INSERT INTO utilisateurs(login,  password) VALUES ('$login','$password')";

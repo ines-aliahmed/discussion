@@ -16,7 +16,7 @@
 	
 
 		</header>
-
+<main>
 
 		
 				<section> <div class="titre"><legend>Connexion</legend>
@@ -34,10 +34,14 @@
 					
 				</form></div>
 </section>
-<footer> 
-
-copyright Mise à jour le 22 janvier 2019
-</footer> 
+</main>
+<footer>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>		
 </body></html>
 
 	<?php
@@ -47,6 +51,7 @@ if(isset($_POST["Connexion"]))
 
 	$login=$_POST["login"];
 	$password=$_POST["pass"];
+	$password = sha1($password);
 	$connexion=mysqli_connect("localhost","root","","discussion");
 	$requete = "SELECT * FROM utilisateurs WHERE login='$login'";
 	$query=mysqli_query($connexion,$requete);
@@ -61,7 +66,7 @@ if(isset($_POST["Connexion"]))
       $_SESSION['id']=$resultat[0][0];
       $_SESSION['login']=$resultat[0][1];
     mysqli_close($connexion);
-    header('Location: discussion.php');
+    header('Location: index.php');
     
     }
 

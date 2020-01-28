@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 jan. 2020 à 14:19
+-- Généré le :  Dim 26 jan. 2020 à 18:05
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -33,23 +33,18 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(140) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `messages`
 --
 
 INSERT INTO `messages` (`id`, `message`, `id_utilisateur`, `date`) VALUES
-(1, 'j', 1, '2020-01-05'),
-(2, 'j', 1, '2020-01-05'),
-(3, 'n', 1, '2020-01-05'),
-(4, 'yujhnn,kkkkkkfffffffffffff\r\n', 1, '2020-01-05'),
-(5, 'comment va', 2, '2020-01-05'),
-(6, 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 2, '2020-01-05'),
-(7, 'jk\r\n', 2, '2020-01-06'),
-(8, 'jh', 5, '2020-01-22');
+(11, 'Eyraud demission', 2, '2020-01-26 17:14:36'),
+(16, 'en route pour la ldc\r\n', 7, '2020-01-26 19:03:43'),
+(10, 'bonjour a la team OM', 1, '2020-01-26 17:13:05');
 
 -- --------------------------------------------------------
 
@@ -63,18 +58,21 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `password`) VALUES
-(1, 'th', 'toto'),
+(1, 'toto', 'momo'),
 (2, 'ney', 'messi'),
 (3, 'admin', 'ADMIN'),
 (4, 'azerty', 'azerty'),
-(5, 'a', 'a');
+(5, 'a', 'a'),
+(8, 'thomas', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98'),
+(7, 'leo', 'b58e6693e0ba007ce2f9e152c4cf19dd5cdbbad6'),
+(9, 'thomas21', 'e9db499e13ac90573163837d2fb1fc9f85402d6d');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
